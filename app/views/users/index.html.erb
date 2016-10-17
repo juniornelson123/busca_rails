@@ -3,7 +3,7 @@
 
   <%= search_form_for @q,html: { class: 'form-inline text-center', role: 'form' } do |f| %>
 
-    <%= f.autocomplete_field :name_cont, autocomplete_user_name_users_path, :size => 15 %>  
+    <%= f.autocomplete_field :name_cont, autocomplete_user_name_users_path, :size => 15,:minLength=>3 %>  
     <%= f.submit 'Search', :class => 'btn btn-warning' %>
 
   <% end %>
