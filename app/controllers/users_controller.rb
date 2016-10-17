@@ -6,8 +6,11 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-
-   @users = User.all.order(:name).page params[:page]
+     
+    @q = User.ransack(params[:q])
+    @users = @q.result(distinct: true).order(name: :asc).page(params[:page])
+    
+    
   end
 
   # GET /users/1

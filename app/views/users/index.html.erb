@@ -1,6 +1,18 @@
 <%- model_class = User -%>
 <div class="page-header">
+
+  <%= search_form_for @q,html: { class: 'form-inline text-center', role: 'form' } do |f| %>
+
+    <%= f.search_field :name_cont %>  
+    <%= f.submit 'Search', :class => 'btn btn-warning' %>
+
+  <% end %>
+
+  <%= link_to t('.new', :default => t("helpers.links.new")),
+              new_user_path,
+              :class => 'btn btn-primary pull-right' %>
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+ 
 </div>
 <table class="table table-striped">
   <thead>
@@ -8,7 +20,6 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:code) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -18,7 +29,6 @@
         <td><%= link_to user.id, user_path(user) %></td>
         <td><%= user.name %></td>
         <td><%= user.code %></td>
-        <td><%=l user.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_user_path(user), :class => 'btn btn-default btn-xs' %>
@@ -33,7 +43,4 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_user_path,
-            :class => 'btn btn-primary' %>
 <%= paginate @users %>

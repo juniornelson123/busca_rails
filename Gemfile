@@ -22,6 +22,7 @@ gem 'ransack'
 gem 'kaminari'
 
 #Bootstrap
+gem 'less-rails'
 gem "twitter-bootstrap-rails"
 
 #Forms
