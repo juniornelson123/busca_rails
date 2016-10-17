@@ -1670,3 +1670,237 @@ Processing by UsersController#autocomplete_user_name as JSON
 Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 1.8ms)
 
 
+Started GET "/user" for 127.0.0.1 at 2016-10-17 19:18:59 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered collection of /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (12.1ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.5ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (27.6ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (143.1ms)
+Started GET "/" for 127.0.0.1 at 2016-10-17 19:19:02 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (379.1ms)
+Completed 200 OK in 3018ms (Views: 2981.3ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ain" for 127.0.0.1 at 2016-10-17 19:19:12 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ain"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'ain%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/autocomplete_user_name?term=afe" for 127.0.0.1 at 2016-10-17 19:19:15 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"afe"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'afe%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 9ms (Views: 1.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/autocomplete_user_name?term=al" for 127.0.0.1 at 2016-10-17 19:19:21 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'al%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/autocomplete_user_name?term=alv" for 127.0.0.1 at 2016-10-17 19:19:21 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"alv"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'alv%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/autocomplete_user_name?term=alb" for 127.0.0.1 at 2016-10-17 19:19:22 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"alb"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'alb%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/autocomplete_user_name?term=al" for 127.0.0.1 at 2016-10-17 19:19:23 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'al%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/autocomplete_user_name?term=alf" for 127.0.0.1 at 2016-10-17 19:19:25 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"alf"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'alf%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/autocomplete_user_name?term=al" for 127.0.0.1 at 2016-10-17 19:20:25 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"al"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'al%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/autocomplete_user_name?term=alb" for 127.0.0.1 at 2016-10-17 19:20:26 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"alb"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'alb%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-10-17 19:20:49 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1445.9ms)
+  Rendered users/new.html.erb within layouts/application (1480.0ms)
+Completed 200 OK in 37209ms (Views: 2786.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-10-17 19:21:34 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pH3joksXAm4dDQBi8rwxvlxQu9/R/1uJX8QVwRKi9DV0vgn2I9NPPL2GkaF4HLoIZ8n7jSOvRJdTvJIAKPXyhw==", "user"=>{"name"=>"kurt", "code"=>"2242"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "kurt"], ["code", 2242], ["created_at", 2016-10-17 22:21:34 UTC], ["updated_at", 2016-10-17 22:21:34 UTC]]
+  [1m[35m (111.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/107
+Completed 302 Found in 126ms (ActiveRecord: 113.1ms)
+
+
+Started GET "/users/107" for 127.0.0.1 at 2016-10-17 19:21:34 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"107"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 107], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 754ms (Views: 589.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-10-17 19:21:39 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (21.7ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (262.8ms)
+Completed 200 OK in 880ms (Views: 852.6ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2016-10-17 19:21:49 -0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (19.4ms)
+  Rendered users/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 8389ms (Views: 690.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2016-10-17 19:22:14 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9jz8NLim8hPI7XPPdkqAzhnglGiIyp0kahCtwIFYbasm/xZg0GK/QWhm4gz86gt4InnUOnqagjpmaCoBuw9rGQ==", "user"=>{"name"=>"erica", "code"=>"402"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "erica"], ["code", 402], ["created_at", 2016-10-17 22:22:14 UTC], ["updated_at", 2016-10-17 22:22:14 UTC]]
+  [1m[35m (21.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/108
+Completed 302 Found in 50ms (ActiveRecord: 23.6ms)
+
+
+Started GET "/users/108" for 127.0.0.1 at 2016-10-17 19:22:14 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"108"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 108], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 609ms (Views: 604.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-10-17 19:22:18 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (223.6ms)
+Completed 200 OK in 808ms (Views: 800.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/49/edit" for 127.0.0.1 at 2016-10-17 19:22:29 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (18.1ms)
+  Rendered users/edit.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 861ms (Views: 611.4ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/users/49" for 127.0.0.1 at 2016-10-17 19:22:56 -0300
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xMpcmjf18NfqDupCEevRh2FxsIbYzVSm1oiIZ4Zgr2oUCbbOXzG9hUqFe4GbS1oxWujw1CqdS7ja8A+mvDep2A==", "user"=>{"name"=>"afe", "code"=>"3350"}, "commit"=>"Update User", "id"=>"49"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["name", "afe"], ["updated_at", 2016-10-17 22:22:56 UTC], ["id", 49]]
+  [1m[35m (54.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/49
+Completed 302 Found in 78ms (ActiveRecord: 57.4ms)
+
+
+Started GET "/users/49" for 127.0.0.1 at 2016-10-17 19:22:57 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 606ms (Views: 596.6ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/49" for 127.0.0.1 at 2016-10-17 19:23:04 -0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FPJ33bT5/2UV8/+RDitXZExvR0oYdmfcKKXJd/+X8IjEMZ2J3D2yN7V4blKEi9zSd/YHGOomeMIk3U62xcD2Og==", "id"=>"49"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 49]]
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 35ms (ActiveRecord: 21.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-10-17 19:23:04 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (343.2ms)
+Completed 200 OK in 986ms (Views: 978.4ms | ActiveRecord: 2.7ms)
+
+
