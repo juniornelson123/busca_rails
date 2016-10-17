@@ -533,3 +533,246 @@
   INFO [e53c988c] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/buscarails/shared/bundle --without development test --deployment --quiet on 104.131.74.179
  DEBUG [e53c988c] Command: cd /home/deploy/apps/buscarails/releases/20161017225217 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/buscarails/shared/bundle --without development test --deployment --quiet
  DEBUG [e53c988c] 	bash: line 1: 30395 Killed                  ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/buscarails/shared/bundle --without development test --deployment --quiet
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-17 19:56:16 -0300 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f5201b33] Running [ -d ~/.rvm ] on 104.131.74.179
+ DEBUG [f5201b33] Command: [ -d ~/.rvm ]
+ DEBUG [f5201b33] Finished in 15.510 seconds with exit status 0 (successful).
+ DEBUG [6c5a7307] Running ~/.rvm/bin/rvm version on 104.131.74.179
+ DEBUG [6c5a7307] Command: ~/.rvm/bin/rvm version
+ DEBUG [6c5a7307] 	rvm 1.27.0 (master) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [6c5a7307] 	
+ DEBUG [6c5a7307] Finished in 10.031 seconds with exit status 0 (successful).
+ DEBUG [1f58ede0] Running ~/.rvm/bin/rvm current on 104.131.74.179
+ DEBUG [1f58ede0] Command: ~/.rvm/bin/rvm current
+ DEBUG [1f58ede0] 	ruby-2.3.0
+ DEBUG [1f58ede0] 	
+ DEBUG [1f58ede0] Finished in 1.495 seconds with exit status 0 (successful).
+ DEBUG [e3184345] Running ~/.rvm/bin/rvm default do ruby --version on 104.131.74.179
+ DEBUG [e3184345] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [e3184345] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [e3184345] 	
+ DEBUG [e3184345] Finished in 0.869 seconds with exit status 0 (successful).
+  INFO [46248473] Running /usr/bin/env mkdir -p /tmp on 104.131.74.179
+ DEBUG [46248473] Command: /usr/bin/env mkdir -p /tmp
+  INFO [46248473] Finished in 1.895 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-buscarails-production-junior.sh 0.0%
+  INFO Uploading /tmp/git-ssh-buscarails-production-junior.sh 100.0%
+  INFO [2e0f8cf3] Running /usr/bin/env chmod 700 /tmp/git-ssh-buscarails-production-junior.sh on 104.131.74.179
+ DEBUG [2e0f8cf3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-buscarails-production-junior.sh
+  INFO [2e0f8cf3] Finished in 1.199 seconds with exit status 0 (successful).
+  INFO [a51b3e07] Running /usr/bin/env git ls-remote --heads git@github.com:juniornelson123/busca_rails.git on 104.131.74.179
+ DEBUG [a51b3e07] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env git ls-remote --heads git@github.com:juniornelson123/busca_rails.git )
+ DEBUG [a51b3e07] 	56a8d1e851944fb4c79ad5a0d477bbe0a4fceca5	refs/heads/master
+ DEBUG [a51b3e07] 	
+  INFO [a51b3e07] Finished in 1.914 seconds with exit status 0 (successful).
+  INFO [a75b5c5c] Running /usr/bin/env mkdir -p /home/deploy/apps/buscarails/shared /home/deploy/apps/buscarails/releases on 104.131.74.179
+ DEBUG [a75b5c5c] Command: /usr/bin/env mkdir -p /home/deploy/apps/buscarails/shared /home/deploy/apps/buscarails/releases
+  INFO [a75b5c5c] Finished in 1.404 seconds with exit status 0 (successful).
+  INFO [f8709571] Running /usr/bin/env mkdir -p /home/deploy/apps/buscarails/shared/public/assets on 104.131.74.179
+ DEBUG [f8709571] Command: /usr/bin/env mkdir -p /home/deploy/apps/buscarails/shared/public/assets
+  INFO [f8709571] Finished in 1.111 seconds with exit status 0 (successful).
+ DEBUG [de0614ac] Running [ -f /home/deploy/apps/buscarails/shared/puma.rb ] on 104.131.74.179
+ DEBUG [de0614ac] Command: [ -f /home/deploy/apps/buscarails/shared/puma.rb ]
+ DEBUG [de0614ac] Finished in 1.077 seconds with exit status 0 (successful).
+ DEBUG [0155ebb5] Running [ -f /home/deploy/apps/buscarails/current/REVISION ] on 104.131.74.179
+ DEBUG [0155ebb5] Command: [ -f /home/deploy/apps/buscarails/current/REVISION ]
+ DEBUG [0155ebb5] Finished in 0.473 seconds with exit status 1 (failed).
+ DEBUG [2100d87b] Running [ -f /home/deploy/apps/buscarails/repo/HEAD ] on 104.131.74.179
+ DEBUG [2100d87b] Command: [ -f /home/deploy/apps/buscarails/repo/HEAD ]
+ DEBUG [2100d87b] Finished in 0.542 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/apps/buscarails/repo
+ DEBUG [5ebd5dd2] Running if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [5ebd5dd2] Command: if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi
+ DEBUG [5ebd5dd2] Finished in 1.300 seconds with exit status 0 (successful).
+  INFO [e75a3e40] Running /usr/bin/env git remote update --prune on 104.131.74.179
+ DEBUG [e75a3e40] Command: cd /home/deploy/apps/buscarails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e75a3e40] 	Fetching origin
+ DEBUG [e75a3e40] 	
+ DEBUG [e75a3e40] 	remote: Counting objects: 6, done.[K
+ DEBUG [e75a3e40] 	
+ DEBUG [e75a3e40] 	remote: Compressing objects:  33% (1/3)   [K
+ DEBUG [e75a3e40] 	remote: Compressing objects:  66% (2/3)   [K
+ DEBUG [e75a3e40] 	remote: Compressing objects: 100% (3/3)   [K
+ DEBUG [e75a3e40] 	remote: Compressing objects: 100% (3/3), done.[K
+ DEBUG [e75a3e40] 	
+ DEBUG [e75a3e40] 	remote: Total 6 (delta 3), reused 6 (delta 3), pack-reused 0[K
+ DEBUG [e75a3e40] 	
+ DEBUG [e75a3e40] 	Unpacking objects:  16% (1/6)   
+ DEBUG [e75a3e40] 	Unpacking objects:  33% (2/6)   
+ DEBUG [e75a3e40] 	Unpacking objects:  50% (3/6)   
+ DEBUG [e75a3e40] 	Unpacking objects:  66% (4/6)   
+ DEBUG [e75a3e40] 	Unpacking objects:  83% (5/6)   
+ DEBUG [e75a3e40] 	Unpacking objects: 100% (6/6)   
+ DEBUG [e75a3e40] 	Unpacking objects: 100% (6/6), done.
+ DEBUG [e75a3e40] 	
+ DEBUG [e75a3e40] 	From github.com:juniornelson123/busca_rails
+ DEBUG [e75a3e40] 	
+ DEBUG [e75a3e40] 	   6b54693..56a8d1e  master     -> master
+ DEBUG [e75a3e40] 	
+  INFO [e75a3e40] Finished in 4.760 seconds with exit status 0 (successful).
+ DEBUG [1d9292e7] Running if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [1d9292e7] Command: if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi
+ DEBUG [1d9292e7] Finished in 5.412 seconds with exit status 0 (successful).
+  INFO [f2b19490] Running /usr/bin/env mkdir -p /home/deploy/apps/buscarails/releases/20161017225655 on 104.131.74.179
+ DEBUG [f2b19490] Command: cd /home/deploy/apps/buscarails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/buscarails/releases/20161017225655 )
+  INFO [f2b19490] Finished in 1.207 seconds with exit status 0 (successful).
+  INFO [d18de1ea] Running /usr/bin/env git archive master | tar -x -f - -C /home/deploy/apps/buscarails/releases/20161017225655 on 104.131.74.179
+ DEBUG [d18de1ea] Command: cd /home/deploy/apps/buscarails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/deploy/apps/buscarails/releases/20161017225655 )
+  INFO [d18de1ea] Finished in 1.301 seconds with exit status 0 (successful).
+ DEBUG [65d24130] Running if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [65d24130] Command: if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi
+ DEBUG [65d24130] Finished in 0.755 seconds with exit status 0 (successful).
+ DEBUG [3f145f21] Running /usr/bin/env git rev-list --max-count=1 master on 104.131.74.179
+ DEBUG [3f145f21] Command: cd /home/deploy/apps/buscarails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3f145f21] 	56a8d1e851944fb4c79ad5a0d477bbe0a4fceca5
+ DEBUG [3f145f21] 	
+ DEBUG [3f145f21] Finished in 1.178 seconds with exit status 0 (successful).
+ DEBUG [e8253b25] Running if test ! -d /home/deploy/apps/buscarails/releases/20161017225655; then echo "Directory does not exist '/home/deploy/apps/buscarails/releases/20161017225655'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [e8253b25] Command: if test ! -d /home/deploy/apps/buscarails/releases/20161017225655; then echo "Directory does not exist '/home/deploy/apps/buscarails/releases/20161017225655'" 1>&2; false; fi
+ DEBUG [e8253b25] Finished in 0.503 seconds with exit status 0 (successful).
+  INFO [eceff24b] Running /usr/bin/env echo "56a8d1e851944fb4c79ad5a0d477bbe0a4fceca5" >> REVISION on 104.131.74.179
+ DEBUG [eceff24b] Command: cd /home/deploy/apps/buscarails/releases/20161017225655 && /usr/bin/env echo "56a8d1e851944fb4c79ad5a0d477bbe0a4fceca5" >> REVISION
+  INFO [eceff24b] Finished in 0.490 seconds with exit status 0 (successful).
+  INFO [6001739d] Running /usr/bin/env mkdir -p /home/deploy/apps/buscarails/releases/20161017225655/public on 104.131.74.179
+ DEBUG [6001739d] Command: /usr/bin/env mkdir -p /home/deploy/apps/buscarails/releases/20161017225655/public
+  INFO [6001739d] Finished in 2.513 seconds with exit status 0 (successful).
+ DEBUG [84321407] Running [ -L /home/deploy/apps/buscarails/releases/20161017225655/public/assets ] on 104.131.74.179
+ DEBUG [84321407] Command: [ -L /home/deploy/apps/buscarails/releases/20161017225655/public/assets ]
+ DEBUG [84321407] Finished in 1.073 seconds with exit status 1 (failed).
+ DEBUG [1cd8d79e] Running [ -d /home/deploy/apps/buscarails/releases/20161017225655/public/assets ] on 104.131.74.179
+ DEBUG [1cd8d79e] Command: [ -d /home/deploy/apps/buscarails/releases/20161017225655/public/assets ]
+ DEBUG [1cd8d79e] Finished in 1.039 seconds with exit status 1 (failed).
+  INFO [70bb625a] Running /usr/bin/env ln -s /home/deploy/apps/buscarails/shared/public/assets /home/deploy/apps/buscarails/releases/20161017225655/public/assets on 104.131.74.179
+ DEBUG [70bb625a] Command: /usr/bin/env ln -s /home/deploy/apps/buscarails/shared/public/assets /home/deploy/apps/buscarails/releases/20161017225655/public/assets
+  INFO [70bb625a] Finished in 0.464 seconds with exit status 0 (successful).
+ DEBUG [96e83a31] Running if test ! -d /home/deploy/apps/buscarails/releases/20161017225655; then echo "Directory does not exist '/home/deploy/apps/buscarails/releases/20161017225655'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [96e83a31] Command: if test ! -d /home/deploy/apps/buscarails/releases/20161017225655; then echo "Directory does not exist '/home/deploy/apps/buscarails/releases/20161017225655'" 1>&2; false; fi
+ DEBUG [96e83a31] Finished in 0.575 seconds with exit status 0 (successful).
+ DEBUG [c5f0753d] Running ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/buscarails/shared/bundle on 104.131.74.179
+ DEBUG [c5f0753d] Command: cd /home/deploy/apps/buscarails/releases/20161017225655 && ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/buscarails/shared/bundle
+ DEBUG [c5f0753d] 	[31mThe following gems are missing[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * tzinfo (1.2.2)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * activesupport (5.0.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * nokogiri (1.6.8.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * rails-dom-testing (2.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * loofah (2.0.3)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * rails-html-sanitizer (1.0.3)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * actionview (5.0.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * rack-test (0.6.3)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * actionpack (5.0.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * websocket-driver (0.6.4)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * actioncable (5.0.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * globalid (0.3.7)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * activejob (5.0.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * mime-types (3.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * mail (2.6.4)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * actionmailer (5.0.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * activemodel (5.0.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * activerecord (5.0.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * net-ssh (3.2.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * sshkit (1.11.3)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * airbrussh (1.1.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * byebug (9.0.6)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * capistrano (3.6.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * capistrano-rails (1.1.8)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * puma (3.6.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * capistrano3-puma (1.2.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * railties (5.0.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * coffee-rails (4.2.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * httparty (0.14.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * jbuilder (2.6.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * jquery-rails (4.2.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * jquery-ui-rails (5.0.5)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * kaminari (0.17.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * less (2.6.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * sprockets (3.7.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * less-rails (2.7.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * rb-inotify (0.9.7)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * listen (3.0.8)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * pg (0.19.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * polyamorous (1.3.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * sprockets-rails (3.2.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * rails (5.0.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * rails4-autocomplete (1.1.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * ransack (1.8.2)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * sass (3.4.22)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * sass-rails (5.0.6)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * simple_form (3.3.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * spring (2.0.0)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * twitter-bootstrap-rails (3.2.2)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * uglifier (3.0.2)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[31m * web-console (3.3.1)[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [c5f0753d] 	
+ DEBUG [c5f0753d] Finished in 2.598 seconds with exit status 1 (failed).
+  INFO [52d0ad39] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/buscarails/shared/bundle --without development test --deployment --quiet on 104.131.74.179
+ DEBUG [52d0ad39] Command: cd /home/deploy/apps/buscarails/releases/20161017225655 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/buscarails/shared/bundle --without development test --deployment --quiet
+ DEBUG [52d0ad39] 	bash: line 1: 31779 Killed                  ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/buscarails/shared/bundle --without development test --deployment --quiet
