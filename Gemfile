@@ -9,10 +9,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'jquery-ui-rails' 
-gem 'turbolinks', '~> 5'
+#gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'listen', '~> 3.0.5'
-gem 'therubyracer'
+#gem 'therubyracer'
 
 gem 'rails4-autocomplete' 
 gem 'httparty'
@@ -33,7 +33,7 @@ gem 'ransack'
 gem 'kaminari'
 
 #Bootstrap
-gem 'less-rails'
+#gem 'less-rails'
 gem "twitter-bootstrap-rails"
 
 #Forms

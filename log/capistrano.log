@@ -1,0 +1,535 @@
+# Logfile created on 2016-10-17 19:51:47 -0300 by logger.rb/47272
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-10-17 19:51:47 -0300 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [4ba170c6] Running [ -d ~/.rvm ] on 104.131.74.179
+ DEBUG [4ba170c6] Command: [ -d ~/.rvm ]
+ DEBUG [4ba170c6] Finished in 8.981 seconds with exit status 0 (successful).
+ DEBUG [7e13f3a1] Running ~/.rvm/bin/rvm version on 104.131.74.179
+ DEBUG [7e13f3a1] Command: ~/.rvm/bin/rvm version
+ DEBUG [7e13f3a1] 	rvm 1.27.0 (master) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [7e13f3a1] 	
+ DEBUG [7e13f3a1] Finished in 7.432 seconds with exit status 0 (successful).
+ DEBUG [161257b5] Running ~/.rvm/bin/rvm current on 104.131.74.179
+ DEBUG [161257b5] Command: ~/.rvm/bin/rvm current
+ DEBUG [161257b5] 	ruby-2.3.0
+ DEBUG [161257b5] 	
+ DEBUG [161257b5] Finished in 0.891 seconds with exit status 0 (successful).
+ DEBUG [c720f1a3] Running ~/.rvm/bin/rvm default do ruby --version on 104.131.74.179
+ DEBUG [c720f1a3] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [c720f1a3] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [c720f1a3] 	
+ DEBUG [c720f1a3] Finished in 1.253 seconds with exit status 0 (successful).
+  INFO [7c0b6120] Running /usr/bin/env mkdir -p /tmp on 104.131.74.179
+ DEBUG [7c0b6120] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7c0b6120] Finished in 0.587 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-buscarails-production-junior.sh 0.0%
+  INFO Uploading /tmp/git-ssh-buscarails-production-junior.sh 100.0%
+  INFO [9b794135] Running /usr/bin/env chmod 700 /tmp/git-ssh-buscarails-production-junior.sh on 104.131.74.179
+ DEBUG [9b794135] Command: /usr/bin/env chmod 700 /tmp/git-ssh-buscarails-production-junior.sh
+  INFO [9b794135] Finished in 0.728 seconds with exit status 0 (successful).
+  INFO [6026d2da] Running /usr/bin/env git ls-remote --heads git@github.com:juniornelson123/busca_rails.git on 104.131.74.179
+ DEBUG [6026d2da] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env git ls-remote --heads git@github.com:juniornelson123/busca_rails.git )
+ DEBUG [6026d2da] 	Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+ DEBUG [6026d2da] 	
+ DEBUG [6026d2da] 	6b54693707ea8327834fb1e5350c120312bfdf4b	refs/heads/master
+  INFO [6026d2da] Finished in 1.578 seconds with exit status 0 (successful).
+  INFO [5b50759e] Running /usr/bin/env mkdir -p /home/deploy/apps/buscarails/shared /home/deploy/apps/buscarails/releases on 104.131.74.179
+ DEBUG [5b50759e] Command: /usr/bin/env mkdir -p /home/deploy/apps/buscarails/shared /home/deploy/apps/buscarails/releases
+  INFO [5b50759e] Finished in 3.320 seconds with exit status 0 (successful).
+  INFO [e765a4c9] Running /usr/bin/env mkdir -p /home/deploy/apps/buscarails/shared/public/assets on 104.131.74.179
+ DEBUG [e765a4c9] Command: /usr/bin/env mkdir -p /home/deploy/apps/buscarails/shared/public/assets
+  INFO [e765a4c9] Finished in 0.453 seconds with exit status 0 (successful).
+ DEBUG [000f6804] Running [ -f /home/deploy/apps/buscarails/shared/puma.rb ] on 104.131.74.179
+ DEBUG [000f6804] Command: [ -f /home/deploy/apps/buscarails/shared/puma.rb ]
+ DEBUG [000f6804] Finished in 0.500 seconds with exit status 1 (failed).
+  WARN puma.rb NOT FOUND!
+ DEBUG Uploading /home/deploy/apps/buscarails/shared/puma.rb 0.0%
+  INFO Uploading /home/deploy/apps/buscarails/shared/puma.rb 100.0%
+  INFO puma.rb generated
+ DEBUG [216c3c76] Running [ -f /home/deploy/apps/buscarails/current/REVISION ] on 104.131.74.179
+ DEBUG [216c3c76] Command: [ -f /home/deploy/apps/buscarails/current/REVISION ]
+ DEBUG [216c3c76] Finished in 0.494 seconds with exit status 1 (failed).
+ DEBUG [cf942fca] Running [ -f /home/deploy/apps/buscarails/repo/HEAD ] on 104.131.74.179
+ DEBUG [cf942fca] Command: [ -f /home/deploy/apps/buscarails/repo/HEAD ]
+ DEBUG [cf942fca] Finished in 0.483 seconds with exit status 1 (failed).
+ DEBUG [42950a9d] Running if test ! -d /home/deploy/apps/buscarails; then echo "Directory does not exist '/home/deploy/apps/buscarails'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [42950a9d] Command: if test ! -d /home/deploy/apps/buscarails; then echo "Directory does not exist '/home/deploy/apps/buscarails'" 1>&2; false; fi
+ DEBUG [42950a9d] Finished in 1.043 seconds with exit status 0 (successful).
+  INFO [b4e3cebb] Running /usr/bin/env git clone --mirror git@github.com:juniornelson123/busca_rails.git /home/deploy/apps/buscarails/repo on 104.131.74.179
+ DEBUG [b4e3cebb] Command: cd /home/deploy/apps/buscarails && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env git clone --mirror git@github.com:juniornelson123/busca_rails.git /home/deploy/apps/buscarails/repo )
+ DEBUG [b4e3cebb] 	Cloning into bare repository '/home/deploy/apps/buscarails/repo'...
+ DEBUG [b4e3cebb] 	
+ DEBUG [b4e3cebb] 	Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+ DEBUG [b4e3cebb] 	
+ DEBUG [b4e3cebb] 	remote: Counting objects: 1256, done.[K
+ DEBUG [b4e3cebb] 	
+ DEBUG [b4e3cebb] 	remote: Compressing objects:   0% (1/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:   1% (10/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:   2% (20/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:   3% (30/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:   4% (40/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:   5% (50/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:   6% (60/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:   7% (70/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:   8% (80/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:   9% (89/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  10% (99/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  11% (109/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  12% (119/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  13% (129/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  14% (139/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  15% (149/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  16% (159/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  17% (168/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  18% (178/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  19% (188/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  20% (198/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  21% (208/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  22% (218/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  23% (228/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  24% (238/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  25% (247/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  26% (257/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  27% (267/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  28% (277/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  29% (287/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  30% (297/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  31% (307/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  32% (317/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  33% (327/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  34% (336/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  35% (346/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  36% (356/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  37% (366/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  38% (376/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  39% (386/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  40% (396/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  41% (406/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  42% (415/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  43% (425/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  44% (435/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  45% (445/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  46% (455/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  47% (465/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  48% (475/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  49% (485/988)   [Kremote: Compressing objects:  50% (494/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  51% (504/988)   [Kremote: Compressing objects:  52% (514/988)   [Kremote: Compressing objects:  53% (524/988)   [Kremote: Compressing objects:  54% (534/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  55% (544/988)   [Kremote: Compressing objects:  56% (554/988)   [Kremote: Compressing objects:  57% (564/988)   [Kremote: Compressing objects:  58% (574/988)   [Kremote: Compressing objects:  59% (583/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  60% (593/988)   [Kremote: Compressing objects:  61% (603/988)   [Kremote: Compressing objects:  62% (613/988)   [Kremote: Compressing objects:  63% (623/988)   [Kremote: Compressing objects:  64% (633/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  65% (643/988)   [Kremote: Compressing objects:  66% (653/988)   [Kremote: Compressing objects:  67% (662/988)   [Kremote: Compressing objects:  68% (672/988)   [Kremote: Compressing objects:  69% (682/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  70% (692/988)   [Kremote: Compressing objects:  71% (702/988)   [Kremote: Compressing objects:  72% (712/988)   [Kremote: Compressing objects:  73% (722/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  74% (732/988)   [Kremote: Compressing objects:  75% (741/988)   [Kremote: Compressing objects:  76% (751/988)   [Kremote: Compressing objects:  77% (761/988)   [Kremote: Compressing objects:  78% (771/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  79% (781/988)   [Kremote: Compressing objects:  80% (791/988)   [Kremote: Compressing objects:  81% (801/988)   [Kremote: Compressing objects:  82% (811/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  83% (821/988)   [Kremote: Compressing objects:  84% (830/988)   [Kremote: Compressing objects:  85% (840/988)   [Kremote: Compressing objects:  86% (850/988)   [Kremote: Compressing objects:  87% (860/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  88% (870/988)   [Kremote: Compressing objects:  89% (880/988)   [Kremote: Compressing objects:  90% (890/988)   [Kremote: Compressing objects:  91% (900/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  92% (909/988)   [Kremote: Compressing objects:  93% (919/988)   [Kremote: Compressing objects:  94% (929/988)   [Kremote: Compressing objects:  95% (939/988)   [Kremote: Compressing objects:  96% (949/988)   [Kremote: Compressing objects:  97% (959/988)   [K
+ DEBUG [b4e3cebb] 	remote: Compressing objects:  98% (969/988)   [Kremote: Compressing objects:  99% (979/988)   [Kremote: Compressing objects: 100% (988/988)   [Kremote: Compressing objects: 100% (988/988), done.[K
+ DEBUG [b4e3cebb] 	Receiving objects:   0% (1/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:   1% (13/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:   2% (26/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:   3% (38/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:   4% (51/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:   5% (63/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:   6% (76/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:   7% (88/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:   8% (101/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:   9% (114/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  10% (126/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  11% (139/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  12% (151/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  13% (164/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  14% (176/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  15% (189/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  16% (201/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  17% (214/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  18% (227/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  19% (239/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  20% (252/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  21% (264/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  22% (277/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  23% (289/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  24% (302/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  25% (314/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  26% (327/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  27% (340/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  28% (352/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  29% (365/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  30% (377/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  31% (390/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  32% (402/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  33% (415/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  34% (428/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  35% (440/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  36% (453/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  37% (465/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  38% (478/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  39% (490/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  40% (503/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  41% (515/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  42% (528/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  43% (541/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  44% (553/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  45% (566/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  46% (578/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  47% (591/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  48% (603/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  49% (616/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  50% (628/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  51% (641/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  52% (654/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  53% (666/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  54% (679/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  55% (691/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  56% (704/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  57% (716/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  58% (729/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  59% (742/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  60% (754/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  61% (767/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  62% (779/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  63% (792/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  64% (804/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  65% (817/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  66% (829/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  67% (842/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  68% (855/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  69% (867/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  70% (880/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  71% (892/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  72% (905/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  73% (917/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  74% (930/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  75% (942/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  76% (955/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  77% (968/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  78% (980/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  79% (993/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  80% (1005/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  81% (1018/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  82% (1030/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  83% (1043/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  84% (1056/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  85% (1068/1256)   
+ DEBUG [b4e3cebb] 	remote: Total 1256 (delta 155), reused 1237 (delta 136), pack-reused 0[K
+ DEBUG [b4e3cebb] 	
+ DEBUG [b4e3cebb] 	Receiving objects:  86% (1081/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  87% (1093/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  88% (1106/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  89% (1118/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  90% (1131/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  91% (1143/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  92% (1156/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  93% (1169/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  94% (1181/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  95% (1194/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  96% (1206/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  97% (1219/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  98% (1231/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects:  99% (1244/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects: 100% (1256/1256)   
+ DEBUG [b4e3cebb] 	Receiving objects: 100% (1256/1256), 2.00 MiB | 0 bytes/s, done.
+ DEBUG [b4e3cebb] 	
+ DEBUG [b4e3cebb] 	Resolving deltas:   0% (0/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:   1% (2/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:   3% (5/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:   5% (8/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:   6% (10/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:   7% (11/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:   8% (13/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:   9% (14/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  10% (16/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  12% (19/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  14% (22/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  15% (24/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  16% (25/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  18% (28/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  19% (30/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  21% (33/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  22% (35/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  23% (36/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  24% (38/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  25% (40/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  28% (44/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  29% (46/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  30% (48/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  31% (49/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  33% (52/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  37% (58/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  38% (59/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  40% (62/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  41% (64/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  42% (66/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  45% (71/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  47% (73/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  49% (76/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  50% (79/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  51% (80/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  52% (81/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  56% (87/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  57% (89/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  60% (94/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  61% (95/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  62% (97/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  63% (99/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  65% (102/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  66% (103/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  69% (108/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  71% (111/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  72% (112/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  73% (114/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  76% (119/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  77% (120/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  78% (122/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  79% (123/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  82% (128/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  83% (129/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  84% (131/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  86% (134/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  87% (135/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  88% (137/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  89% (138/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  90% (140/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  92% (143/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  93% (145/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  94% (146/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  95% (148/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  96% (149/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  97% (151/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  98% (152/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas:  99% (154/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas: 100% (155/155)   
+ DEBUG [b4e3cebb] 	Resolving deltas: 100% (155/155), done.
+ DEBUG [b4e3cebb] 	
+ DEBUG [b4e3cebb] 	Checking connectivity... 
+ DEBUG [b4e3cebb] 	done.
+ DEBUG [b4e3cebb] 	
+  INFO [b4e3cebb] Finished in 2.704 seconds with exit status 0 (successful).
+ DEBUG [8b924a42] Running if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [8b924a42] Command: if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi
+ DEBUG [8b924a42] Finished in 2.615 seconds with exit status 0 (successful).
+  INFO [1053c1ca] Running /usr/bin/env git remote update --prune on 104.131.74.179
+ DEBUG [1053c1ca] Command: cd /home/deploy/apps/buscarails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [1053c1ca] 	Fetching origin
+ DEBUG [1053c1ca] 	
+  INFO [1053c1ca] Finished in 2.325 seconds with exit status 0 (successful).
+ DEBUG [e08f7087] Running if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [e08f7087] Command: if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi
+ DEBUG [e08f7087] Finished in 0.688 seconds with exit status 0 (successful).
+  INFO [ae98a329] Running /usr/bin/env mkdir -p /home/deploy/apps/buscarails/releases/20161017225217 on 104.131.74.179
+ DEBUG [ae98a329] Command: cd /home/deploy/apps/buscarails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env mkdir -p /home/deploy/apps/buscarails/releases/20161017225217 )
+  INFO [ae98a329] Finished in 0.630 seconds with exit status 0 (successful).
+  INFO [d4bd99bc] Running /usr/bin/env git archive master | tar -x -f - -C /home/deploy/apps/buscarails/releases/20161017225217 on 104.131.74.179
+ DEBUG [d4bd99bc] Command: cd /home/deploy/apps/buscarails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/deploy/apps/buscarails/releases/20161017225217 )
+  INFO [d4bd99bc] Finished in 0.646 seconds with exit status 0 (successful).
+ DEBUG [40713be4] Running if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [40713be4] Command: if test ! -d /home/deploy/apps/buscarails/repo; then echo "Directory does not exist '/home/deploy/apps/buscarails/repo'" 1>&2; false; fi
+ DEBUG [40713be4] Finished in 0.448 seconds with exit status 0 (successful).
+ DEBUG [3459e582] Running /usr/bin/env git rev-list --max-count=1 master on 104.131.74.179
+ DEBUG [3459e582] Command: cd /home/deploy/apps/buscarails/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-buscarails-production-junior.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3459e582] 	6b54693707ea8327834fb1e5350c120312bfdf4b
+ DEBUG [3459e582] 	
+ DEBUG [3459e582] Finished in 0.456 seconds with exit status 0 (successful).
+ DEBUG [35481c47] Running if test ! -d /home/deploy/apps/buscarails/releases/20161017225217; then echo "Directory does not exist '/home/deploy/apps/buscarails/releases/20161017225217'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [35481c47] Command: if test ! -d /home/deploy/apps/buscarails/releases/20161017225217; then echo "Directory does not exist '/home/deploy/apps/buscarails/releases/20161017225217'" 1>&2; false; fi
+ DEBUG [35481c47] Finished in 0.886 seconds with exit status 0 (successful).
+  INFO [796e56a5] Running /usr/bin/env echo "6b54693707ea8327834fb1e5350c120312bfdf4b" >> REVISION on 104.131.74.179
+ DEBUG [796e56a5] Command: cd /home/deploy/apps/buscarails/releases/20161017225217 && /usr/bin/env echo "6b54693707ea8327834fb1e5350c120312bfdf4b" >> REVISION
+  INFO [796e56a5] Finished in 0.426 seconds with exit status 0 (successful).
+  INFO [2ee9205c] Running /usr/bin/env mkdir -p /home/deploy/apps/buscarails/releases/20161017225217/public on 104.131.74.179
+ DEBUG [2ee9205c] Command: /usr/bin/env mkdir -p /home/deploy/apps/buscarails/releases/20161017225217/public
+  INFO [2ee9205c] Finished in 0.426 seconds with exit status 0 (successful).
+ DEBUG [2e91342e] Running [ -L /home/deploy/apps/buscarails/releases/20161017225217/public/assets ] on 104.131.74.179
+ DEBUG [2e91342e] Command: [ -L /home/deploy/apps/buscarails/releases/20161017225217/public/assets ]
+ DEBUG [2e91342e] Finished in 0.700 seconds with exit status 1 (failed).
+ DEBUG [f77cfa76] Running [ -d /home/deploy/apps/buscarails/releases/20161017225217/public/assets ] on 104.131.74.179
+ DEBUG [f77cfa76] Command: [ -d /home/deploy/apps/buscarails/releases/20161017225217/public/assets ]
+ DEBUG [f77cfa76] Finished in 0.431 seconds with exit status 1 (failed).
+  INFO [4b3c0e64] Running /usr/bin/env ln -s /home/deploy/apps/buscarails/shared/public/assets /home/deploy/apps/buscarails/releases/20161017225217/public/assets on 104.131.74.179
+ DEBUG [4b3c0e64] Command: /usr/bin/env ln -s /home/deploy/apps/buscarails/shared/public/assets /home/deploy/apps/buscarails/releases/20161017225217/public/assets
+  INFO [4b3c0e64] Finished in 0.465 seconds with exit status 0 (successful).
+ DEBUG [05abb0be] Running if test ! -d /home/deploy/apps/buscarails/releases/20161017225217; then echo "Directory does not exist '/home/deploy/apps/buscarails/releases/20161017225217'" 1>&2; false; fi on 104.131.74.179
+ DEBUG [05abb0be] Command: if test ! -d /home/deploy/apps/buscarails/releases/20161017225217; then echo "Directory does not exist '/home/deploy/apps/buscarails/releases/20161017225217'" 1>&2; false; fi
+ DEBUG [05abb0be] Finished in 0.577 seconds with exit status 0 (successful).
+ DEBUG [bf12a386] Running ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/buscarails/shared/bundle on 104.131.74.179
+ DEBUG [bf12a386] Command: cd /home/deploy/apps/buscarails/releases/20161017225217 && ~/.rvm/bin/rvm default do bundle check --path /home/deploy/apps/buscarails/shared/bundle
+ DEBUG [bf12a386] 	[31mThe following gems are missing[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * rake (11.3.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * concurrent-ruby (1.0.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * i18n (0.7.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * minitest (5.9.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * thread_safe (0.3.5)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * tzinfo (1.2.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * activesupport (5.0.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * builder (3.2.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * erubis (2.7.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * mini_portile2 (2.1.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * nokogiri (1.6.8.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * rails-dom-testing (2.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * loofah (2.0.3)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * rails-html-sanitizer (1.0.3)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * actionview (5.0.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * rack (2.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * rack-test (0.6.3)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * actionpack (5.0.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * nio4r (1.2.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * websocket-extensions (0.1.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * websocket-driver (0.6.4)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * actioncable (5.0.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * globalid (0.3.7)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * activejob (5.0.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * mime-types-data (3.2016.0521)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * mime-types (3.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * mail (2.6.4)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * actionmailer (5.0.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * activemodel (5.0.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * arel (7.1.4)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * activerecord (5.0.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * net-ssh (3.2.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * sshkit (1.11.3)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * airbrussh (1.1.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * byebug (9.0.6)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * capistrano (3.6.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * capistrano-rails (1.1.8)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * puma (3.6.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * capistrano3-puma (1.2.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * coffee-script-source (1.10.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * execjs (2.7.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * method_source (0.8.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * thor (0.19.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * railties (5.0.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * coffee-rails (4.2.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * commonjs (0.2.7)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * ffi (1.9.14)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * multi_xml (0.5.5)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * httparty (0.14.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * multi_json (1.12.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * jbuilder (2.6.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * jquery-rails (4.2.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * jquery-ui-rails (5.0.5)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * kaminari (0.17.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * less (2.6.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * sprockets (3.7.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * tilt (2.0.5)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * less-rails (2.7.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * libv8 (3.16.14.15)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * rb-fsevent (0.9.7)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * rb-inotify (0.9.7)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * listen (3.0.8)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * pg (0.19.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * polyamorous (1.3.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * sprockets-rails (3.2.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * rails (5.0.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * rails4-autocomplete (1.1.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * ransack (1.8.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * ref (2.0.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * sass (3.4.22)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * sass-rails (5.0.6)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * simple_form (3.3.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * spring (2.0.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * therubyracer (0.12.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * turbolinks-source (5.0.0)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * turbolinks (5.0.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * twitter-bootstrap-rails (3.2.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * uglifier (3.0.2)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[31m * web-console (3.3.1)[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [bf12a386] 	
+ DEBUG [bf12a386] Finished in 2.979 seconds with exit status 1 (failed).
+  INFO [e53c988c] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/buscarails/shared/bundle --without development test --deployment --quiet on 104.131.74.179
+ DEBUG [e53c988c] Command: cd /home/deploy/apps/buscarails/releases/20161017225217 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/buscarails/shared/bundle --without development test --deployment --quiet
+ DEBUG [e53c988c] 	bash: line 1: 30395 Killed                  ~/.rvm/bin/rvm default do bundle install --path /home/deploy/apps/buscarails/shared/bundle --without development test --deployment --quiet
