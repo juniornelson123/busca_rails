@@ -1,6 +1,8 @@
 require 'httparty'
 
 class UsersController < ApplicationController
+  
+  autocomplete :user,:name, :full => true
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users

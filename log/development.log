@@ -883,3 +883,790 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 417ms (Views: 408.5ms | ActiveRecord: 3.6ms)
 
 
+Started GET "/users?utf8=%E2%9C%93&q[name_cont]=&commit=Search" for 127.0.0.1 at 2016-10-17 18:42:48 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 4.7ms)
+
+
+  
+NoMethodError (undefined method `autocomplete' for #<Class:0x00000005e54ae8>):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:10:in `index'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (32.8ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.3ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.9ms)
+Started GET "/users?utf8=%E2%9C%93&q[name_cont]=&commit=Search" for 127.0.0.1 at 2016-10-17 18:43:23 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 5.2ms)
+
+
+  
+NoMethodError (undefined method `autocomplete' for #<Class:0x00000005ffa2a8>):
+  
+app/models/user.rb:2:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:10:in `index'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (26.4ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (33.5ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.8ms)
+Started GET "/users?utf8=%E2%9C%93&q[name_cont]=&commit=Search" for 127.0.0.1 at 2016-10-17 18:43:29 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"Search"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `autocomplete' for #<Class:0x000000063c4d20>):
+  
+app/models/user.rb:3:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:10:in `index'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (25.2ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.8ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.4ms)
+Started GET "/users?utf8=%E2%9C%93&q[name_cont]=&commit=Search" for 127.0.0.1 at 2016-10-17 18:44:40 -0300
+  
+ArgumentError (wrong number of arguments (1 for 2..3)):
+  
+app/controllers/users_controller.rb:5:in `<class:UsersController>'
+app/controllers/users_controller.rb:3:in `<top (required)>'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (20.4ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.5ms)
+Started GET "/users?utf8=%E2%9C%93&q[name_cont]=&commit=Search" for 127.0.0.1 at 2016-10-17 18:45:02 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (349.9ms)
+Completed 500 Internal Server Error in 373ms (ActiveRecord: 16.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_autocomplete_name_path' for #<#<Class:0x000000041ee980>:0x000000041ec658>):
+    3: 
+    4:   <%= search_form_for @q,html: { class: 'form-inline text-center', role: 'form' } do |f| %>
+    5: 
+    6:     <%= f.search_field :name_cont,'', :autocomplete => users_autocomplete_name_path %>  
+    7:     <%= f.submit 'Search', :class => 'btn btn-warning' %>
+    8: 
+    9:   <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__683036319338167084_34578440'
+app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb__683036319338167084_34578440'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.1ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.1ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (104.7ms)
+Started GET "/users?utf8=%E2%9C%93&q[name_cont]=&commit=Search" for 127.0.0.1 at 2016-10-17 18:45:38 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (314.9ms)
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 10.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_autocomplete_name_path' for #<#<Class:0x00000005f3fe80>:0x00000005f3e148>):
+    3: 
+    4:   <%= search_form_for @q,html: { class: 'form-inline text-center', role: 'form' } do |f| %>
+    5: 
+    6:     <%= f.search_field :name_cont,'', :autocomplete => users_autocomplete_name_path %>  
+    7:     <%= f.submit 'Search', :class => 'btn btn-warning' %>
+    8: 
+    9:   <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__683036319338167084_49989680'
+app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb__683036319338167084_49989680'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.4ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.9ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (89.8ms)
+Started GET "/user" for 127.0.0.1 at 2016-10-17 18:45:47 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.7ms)
+  Rendered collection of /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (14.1ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.4ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.2ms)
+Started GET "/users" for 127.0.0.1 at 2016-10-17 18:46:05 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (25.2ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (3 for 1..2)):
+    3: 
+    4:   <%= search_form_for @q,html: { class: 'form-inline text-center', role: 'form' } do |f| %>
+    5: 
+    6:     <%= f.search_field :name_cont,'', :autocomplete => autocomplete_name_users_path %>  
+    7:     <%= f.submit 'Search', :class => 'btn btn-warning' %>
+    8: 
+    9:   <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__683036319338167084_20591540'
+app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb__683036319338167084_20591540'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (46.3ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.0ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (104.2ms)
+Started GET "/users" for 127.0.0.1 at 2016-10-17 18:46:18 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (233.1ms)
+Completed 500 Internal Server Error in 4954ms (ActiveRecord: 3.2ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery-ui' with type 'application/javascript'
+Checked in these paths: 
+  /home/junior/interaje/rails/testes/busca_rails/app/assets/config
+  /home/junior/interaje/rails/testes/busca_rails/app/assets/images
+  /home/junior/interaje/rails/testes/busca_rails/app/assets/javascripts
+  /home/junior/interaje/rails/testes/busca_rails/app/assets/stylesheets
+  /home/junior/interaje/rails/testes/busca_rails/vendor/assets/javascripts
+  /home/junior/interaje/rails/testes/busca_rails/vendor/assets/stylesheets
+  /home/junior/.rvm/gems/ruby-2.2.2/gems/twitter-bootstrap-rails-3.2.2/app/assets/fonts
+  /home/junior/.rvm/gems/ruby-2.2.2/gems/twitter-bootstrap-rails-3.2.2/app/assets/javascripts
+  /home/junior/.rvm/gems/ruby-2.2.2/gems/twitter-bootstrap-rails-3.2.2/app/assets/stylesheets
+  /home/junior/.rvm/gems/ruby-2.2.2/gems/twitter-bootstrap-rails-3.2.2/vendor/assets/stylesheets
+  /home/junior/.rvm/gems/ruby-2.2.2/gems/rails4-autocomplete-1.1.1/lib/assets/javascripts
+  /home/junior/.rvm/gems/ruby-2.2.2/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/junior/.rvm/gems/ruby-2.2.2/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/junior/.rvm/gems/ruby-2.2.2/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/junior/.rvm/gems/ruby-2.2.2/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+     7:     <title><%= content_for?(:title) ? yield(:title) : "CavernaLabs" %></title>
+     8:     <%= csrf_meta_tags %>
+     9: 
+    10:     <%= stylesheet_link_tag "application", :media => "all" %>
+    11: 
+    12:     <!-- For third-generation iPad with high-resolution Retina display: -->
+    13:     <!-- Size should be 144 x 144 pixels -->
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:10:in `_app_views_layouts_application_html_erb__1499388604386095936_51455500'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (43.5ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.9ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (104.9ms)
+Started GET "/users" for 127.0.0.1 at 2016-10-17 18:51:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (505.5ms)
+Completed 200 OK in 8503ms (Views: 8444.3ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=af&commit=Search" for 127.0.0.1 at 2016-10-17 18:51:50 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"af"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" WHERE ("users"."name" ILIKE '%af%') ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users" WHERE ("users"."name" ILIKE '%af%')[0m
+  Rendered users/index.html.erb within layouts/application (43.7ms)
+Completed 200 OK in 929ms (Views: 902.3ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=Search" for 127.0.0.1 at 2016-10-17 18:51:56 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (303.0ms)
+Completed 200 OK in 890ms (Views: 878.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=Search" for 127.0.0.1 at 2016-10-17 18:52:53 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (357.6ms)
+Completed 200 OK in 1029ms (Views: 998.8ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-10-17 18:54:13 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (335.5ms)
+Completed 500 Internal Server Error in 359ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `autocomplete_name_users_path' for #<#<Class:0x007f6e6f2b5d60>:0x007f6e6f2b4c30>):
+    3: 
+    4:   <%= search_form_for @q,html: { class: 'form-inline text-center', role: 'form' } do |f| %>
+    5: 
+    6:     <%= f.search_field :name_cont, :autocomplete => autocomplete_name_users_path %>  
+    7:     <%= f.submit 'Search', :class => 'btn btn-warning' %>
+    8: 
+    9:   <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__1879594429343650854_70056144122840'
+app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb__1879594429343650854_70056144122840'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (30.3ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.3ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.8ms)
+Started GET "/user" for 127.0.0.1 at 2016-10-17 18:54:18 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered collection of /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (11.0ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.9ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (86.7ms)
+Started GET "/user" for 127.0.0.1 at 2016-10-17 18:55:15 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered collection of /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (10.5ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.1ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.6ms)
+Started GET "/users" for 127.0.0.1 at 2016-10-17 18:55:17 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (349.7ms)
+Completed 500 Internal Server Error in 374ms (ActiveRecord: 13.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `autocomplete_name_users_path' for #<#<Class:0x007f6e6f869658>:0x007f6e6f8682d0>):
+    3: 
+    4:   <%= search_form_for @q,html: { class: 'form-inline text-center', role: 'form' } do |f| %>
+    5: 
+    6:     <%= f.search_field :name_cont, :autocomplete => autocomplete_name_users_path %>  
+    7:     <%= f.submit 'Search', :class => 'btn btn-warning' %>
+    8: 
+    9:   <% end %>
+  
+app/views/users/index.html.erb:6:in `block in _app_views_users_index_html_erb__1879594429343650854_70056147111980'
+app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb__1879594429343650854_70056147111980'
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.3ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.4ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (89.7ms)
+Started GET "/users" for 127.0.0.1 at 2016-10-17 18:55:29 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (247.2ms)
+Completed 200 OK in 893ms (Views: 885.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-10-17 19:00:19 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (264.1ms)
+Completed 200 OK in 945ms (Views: 936.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/autocomplete_user_name?term=sad" for 127.0.0.1 at 2016-10-17 19:00:26 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"sad"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%sad%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/autocomplete_user_name?term=sa" for 127.0.0.1 at 2016-10-17 19:00:27 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"sa"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%sa%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 8ms (Views: 1.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ef" for 127.0.0.1 at 2016-10-17 19:00:46 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ef"}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%ef%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/users/autocomplete_user_name?term=efe" for 127.0.0.1 at 2016-10-17 19:00:52 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"efe"}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%efe%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 14ms (Views: 0.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/users/autocomplete_user_name?term=efe" for 127.0.0.1 at 2016-10-17 19:00:57 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"efe"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%efe%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ef" for 127.0.0.1 at 2016-10-17 19:00:58 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ef"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%ef%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/autocomplete_user_name?term=and" for 127.0.0.1 at 2016-10-17 19:01:02 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"and"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%and%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/autocomplete_user_name?term=andre" for 127.0.0.1 at 2016-10-17 19:01:03 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"andre"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%andre%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/autocomplete_user_name?term=andr" for 127.0.0.1 at 2016-10-17 19:01:04 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"andr"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%andr%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/autocomplete_user_name?term=and" for 127.0.0.1 at 2016-10-17 19:01:04 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"and"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%and%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/autocomplete_user_name?term=an" for 127.0.0.1 at 2016-10-17 19:01:04 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"an"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%an%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 11ms (Views: 3.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/autocomplete_user_name?term=anna" for 127.0.0.1 at 2016-10-17 19:01:08 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"anna"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%anna%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ann" for 127.0.0.1 at 2016-10-17 19:01:10 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ann"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%ann%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 10ms (Views: 1.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ba" for 127.0.0.1 at 2016-10-17 19:01:17 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ba"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%ba%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 10ms (Views: 1.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bname%5D=ba&commit=Search" for 127.0.0.1 at 2016-10-17 19:01:19 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "name"=>"ba"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (347.0ms)
+Completed 200 OK in 960ms (Views: 951.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bname%5D=ba&commit=Search" for 127.0.0.1 at 2016-10-17 19:03:04 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "name"=>"ba"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (270.8ms)
+Completed 200 OK in 880ms (Views: 870.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bname%5D=ba&commit=Search" for 127.0.0.1 at 2016-10-17 19:03:28 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "name"=>"ba"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (282.2ms)
+Completed 200 OK in 899ms (Views: 889.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bname%5D=ba&commit=Search" for 127.0.0.1 at 2016-10-17 19:03:44 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "name"=>"ba"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/junior/interaje/rails/testes/busca_rails/app/views/users/index.html.erb:6: syntax error, unexpected tLABEL
+... :name_cont, data-autocomplete: autocomplete_user_name_users...
+...                               ^):
+  
+app/views/users/index.html.erb:6: syntax error, unexpected tLABEL
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (33.3ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.9ms)
+  Rendering /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.9ms)
+  Rendered /home/junior/.rvm/gems/ruby-2.2.2/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (95.9ms)
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bname%5D=ba&commit=Search" for 127.0.0.1 at 2016-10-17 19:03:58 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "name"=>"ba"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (337.9ms)
+Completed 200 OK in 980ms (Views: 968.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ass" for 127.0.0.1 at 2016-10-17 19:05:10 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ass"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%ass%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/autocomplete_user_name?term=as" for 127.0.0.1 at 2016-10-17 19:05:14 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"as"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%as%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/autocomplete_user_name?term=as" for 127.0.0.1 at 2016-10-17 19:05:17 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"as"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%as%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ass" for 127.0.0.1 at 2016-10-17 19:05:18 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ass"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%ass%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/autocomplete_user_name?term=asss" for 127.0.0.1 at 2016-10-17 19:05:19 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"asss"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%asss%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ass" for 127.0.0.1 at 2016-10-17 19:05:20 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ass"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%ass%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 11ms (Views: 0.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bname%5D=ba&commit=Search" for 127.0.0.1 at 2016-10-17 19:06:27 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "name"=>"ba"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (339.6ms)
+Completed 200 OK in 924ms (Views: 911.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/users/autocomplete_user_name?term=bb" for 127.0.0.1 at 2016-10-17 19:06:37 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"bb"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%bb%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname%5D=bb&q%5Bname%5D=&commit=Search" for 127.0.0.1 at 2016-10-17 19:06:49 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name"=>""}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (335.0ms)
+Completed 200 OK in 937ms (Views: 930.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname%5D=afet&q%5Bname%5D=&commit=Search" for 127.0.0.1 at 2016-10-17 19:07:03 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name"=>""}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (288.6ms)
+Completed 200 OK in 928ms (Views: 919.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q[name_cont]=afet&q[name]=&commit=Search" for 127.0.0.1 at 2016-10-17 19:07:20 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"afet", "name"=>""}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" WHERE ("users"."name" ILIKE '%afet%') ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users" WHERE ("users"."name" ILIKE '%afet%')[0m
+  Rendered users/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 636ms (Views: 611.9ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q[name_cont]=afet&q[name]=&commit=Search" for 127.0.0.1 at 2016-10-17 19:09:12 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"afet", "name"=>""}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" WHERE ("users"."name" ILIKE '%afet%') ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users" WHERE ("users"."name" ILIKE '%afet%')[0m
+  Rendered users/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 1269ms (Views: 1259.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/autocomplete_user_name?term=afe" for 127.0.0.1 at 2016-10-17 19:09:25 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"afe"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%afe%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bname%5D=afet&commit=Search" for 127.0.0.1 at 2016-10-17 19:09:33 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "name"=>"afet"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (295.2ms)
+Completed 200 OK in 930ms (Views: 920.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bname%5D=afet&commit=Search" for 127.0.0.1 at 2016-10-17 19:09:49 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"", "name"=>"afet"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (272.5ms)
+Completed 200 OK in 924ms (Views: 915.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/autocomplete_user_name?term=afet" for 127.0.0.1 at 2016-10-17 19:09:58 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"afet"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%afet%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bname_cont%5D=afet&commit=Search" for 127.0.0.1 at 2016-10-17 19:09:58 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"afet"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" WHERE ("users"."name" ILIKE '%afet%') ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users" WHERE ("users"."name" ILIKE '%afet%')[0m
+  Rendered users/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 687ms (Views: 666.2ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&q%5Bname_cont%5D=afet&commit=Search" for 127.0.0.1 at 2016-10-17 19:10:09 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"afet"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" WHERE ("users"."name" ILIKE '%afet%') ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users" WHERE ("users"."name" ILIKE '%afet%')[0m
+  Rendered users/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 633ms (Views: 623.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=&commit=Search" for 127.0.0.1 at 2016-10-17 19:10:17 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>""}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (277.5ms)
+Completed 200 OK in 883ms (Views: 875.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/autocomplete_user_name?term=bar" for 127.0.0.1 at 2016-10-17 19:10:26 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"bar"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%bar%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 10ms (Views: 1.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ba" for 127.0.0.1 at 2016-10-17 19:10:28 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ba"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%ba%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/autocomplete_user_name?term=me" for 127.0.0.1 at 2016-10-17 19:10:34 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"me"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%me%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 8ms (Views: 0.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ne" for 127.0.0.1 at 2016-10-17 19:10:38 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ne"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE '%ne%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 11ms (Views: 2.6ms | ActiveRecord: 1.8ms)
+
+
