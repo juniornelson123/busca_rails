@@ -3,7 +3,7 @@
 
   <%= search_form_for @q,html: { class: 'form-inline text-center', role: 'form' } do |f| %>
 
-    <%= f.autocomplete_field :name_cont, autocomplete_user_name_users_path, :size => 15, data_provide:"typeahead" %>  
+    <%= f.autocomplete_field :name_cont, autocomplete_user_name_users_path, :size => 15 %>  
     <%= f.submit 'Search', :class => 'btn btn-warning' %>
 
   <% end %>
@@ -11,8 +11,14 @@
   <%= link_to t('.new', :default => t("helpers.links.new")),
               new_user_path,
               :class => 'btn btn-primary pull-right' %>
+  
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
  
+</div>
+<div class="row">
+  <div class="col-md-12 text-center">
+    <%= paginate @users%>
+  </div>
 </div>
 <table class="table table-striped">
   <thead>
@@ -43,4 +49,8 @@
   </tbody>
 </table>
 
-<%= paginate @users %>
+<div class="row">
+  <div class="col-md-12 text-center">
+    <%= paginate @users%>
+  </div>
+</div>
