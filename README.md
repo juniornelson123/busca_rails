@@ -1,24 +1,17 @@
-# README
+BUSCA RAILS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sistema de busca de usuarios e gerenciamento de usuarios, com funcionalidade de "autcomplete"
 
-Things you may want to cover:
+Gems ultilizadas:
+	gem 'rails4-autocomplete' - Autocomplete
+	gem 'httparty' - Requests http
+	gem 'ransack' - Ferramenta de Busca
+	gem 'kaminari' - Paginação
+	gem 'less-rails' - Pré compilador less
+	gem 'twitter-bootstrap-rails' - Bootstrap
+	gem 'simple_form' - Simplificação de Forms
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Funcionalidades:
+	-Gerenciamento de usuarios(Criar novo registro,Alterar,Visualizar, Deletar )
+	-Busca de usuarios, por nome.
