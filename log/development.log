@@ -2513,3 +2513,29 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 1197ms (Views: 1189.5ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-10-17 21:48:01 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (314.2ms)
+Completed 200 OK in 1003ms (Views: 996.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/autocomplete_user_name?term=alb" for 127.0.0.1 at 2016-10-17 21:48:08 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"alb"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'alb%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&q%5Bname_cont%5D=albert&commit=Search" for 127.0.0.1 at 2016-10-17 21:48:10 -0300
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"name_cont"=>"albert"}, "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users" WHERE ("users"."name" ILIKE '%albert%')[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" WHERE ("users"."name" ILIKE '%albert%') ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 691ms (Views: 677.9ms | ActiveRecord: 3.3ms)
+
+
