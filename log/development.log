@@ -1993,3 +1993,51 @@ Processing by UsersController#autocomplete_user_name as JSON
 Completed 200 OK in 12ms (Views: 2.1ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2016-10-17 21:08:56 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (543.7ms)
+Completed 200 OK in 8805ms (Views: 8484.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/users/autocomplete_user_name?term=ain" for 127.0.0.1 at 2016-10-17 21:09:13 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"ain"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'ain%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-10-17 21:10:13 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (232.1ms)
+Completed 200 OK in 840ms (Views: 829.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2016-10-17 21:10:32 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" ORDER BY "users"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 100], ["OFFSET", 0]]
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT "users"."id") FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (301.6ms)
+Completed 200 OK in 884ms (Views: 873.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/users/autocomplete_user_name?term=alb" for 127.0.0.1 at 2016-10-17 21:10:48 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"alb"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'alb%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/autocomplete_user_name?term=albe" for 127.0.0.1 at 2016-10-17 21:10:48 -0300
+Processing by UsersController#autocomplete_user_name as JSON
+  Parameters: {"term"=>"albe"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  users.id, users.name FROM "users" WHERE (LOWER(users.name) ILIKE 'albe%') ORDER BY users.name ASC LIMIT $1[0m  [["LIMIT", 10]]
+Completed 200 OK in 8ms (Views: 1.0ms | ActiveRecord: 2.0ms)
+
+

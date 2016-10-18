@@ -3,7 +3,7 @@
 
   <%= search_form_for @q,html: { class: 'form-inline text-center', role: 'form' } do |f| %>
 
-    <%= f.autocomplete_field :name_cont, autocomplete_user_name_users_path, :size => 15,:minLength=>3 %>  
+    <%= f.autocomplete_field :name_cont, autocomplete_user_name_users_path, :size => 15, data_provide:"typeahead" %>  
     <%= f.submit 'Search', :class => 'btn btn-warning' %>
 
   <% end %>
@@ -17,7 +17,6 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:code) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
@@ -26,10 +25,11 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= link_to user.id, user_path(user) %></td>
         <td><%= user.name %></td>
         <td><%= user.code %></td>
         <td>
+        <%= link_to t('.show', :default => t("helpers.links.show")),
+                      user_path(user), :class => 'btn btn-warning btn-xs' %>  
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_user_path(user), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
